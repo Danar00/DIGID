@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ghoniy.projectakhirpapbl">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <activity android:name=".SplashScreen">
+
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Obat.ObatActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/WhiteActivityTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".Obat.DetailObatActivity"
+            android:parentActivityName=".Obat.ObatActivity"
+            android:theme="@style/WhiteActivityTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Obat.ObatActivity" />
+        </activity>
+        <activity
+            android:name=".Penyakit.SearchPenyakitActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/PurpleActivityTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".Penyakit.PenyakitActivity"
+            android:parentActivityName=".Penyakit.SearchPenyakitActivity"
+            android:theme="@style/WhiteActivityTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Penyakit.SearchPenyakitActivity" />
+        </activity>
+        <activity
+            android:name=".RumahSakit.HospitalMapsActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/WhiteActivityTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+    </application>
+</manifest>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--android:background="@drawable/background_obat">-->
+
+    <EditText
+        android:id="@+id/cariObat"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/background_search"
+        android:drawableLeft="@drawable/icon_search"
+        android:drawablePadding="15dp"
+        android:ems="10"
+        android:hint="Cari Obat"
+        android:layout_gravity="center"
+        android:inputType="textPersonName"
+        android:paddingLeft="13dp"
+        android:paddingRight="16dp"
+        android:textSize="22dp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewObat"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="5dp"
+        tools:listitem="@layout/obat" />
+</LinearLayout>
